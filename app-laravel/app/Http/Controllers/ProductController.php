@@ -11,4 +11,8 @@ class ProductController extends Controller
 
         return $products;
     }
+
+    public function show($id) {
+        return "exibindo o produto de id: {$id}";
+    }
 }
