@@ -6,6 +6,22 @@
 
     <h1>exibindo os produtos</h1>
 
+    @if (isset($products))
+        @foreach ($products as $product)
+            <p class="@if ($loop->last) last @endif">{{ $product }}</p>
+        @endforeach
+    @endif
+
+    <hr>
+
+    @forelse ($products as $product)
+        <p class="@if ($loop->first) last @endif">{{ $product }}</p>
+    @empty
+        <p>Nao existem produtos cadastrados</p>
+    @endforelse
+
+    <hr>
+
     @if ($teste === '123')
         è igual
     @elseif ($teste == 123)
@@ -55,3 +71,9 @@
             Default
     @endswitch
 @endsection
+
+<style>
+    .last {
+        background: #77c;
+    }
+</style>
