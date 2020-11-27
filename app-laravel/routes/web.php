@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('products', 'ProductController@index')->name('products.index');
+
 Route::get('/login', function () {
     return 'login';
 })->name('login');
@@ -28,6 +30,7 @@ Route::get('/login', function () {
 //     });
 // });
 
+/*
 Route::group([
     'middleware' => [],
     'prefix' => 'admin',
@@ -57,9 +60,9 @@ Route::view('/view', 'welcome');
 
 Route::redirect('/redirect1', '/redirect2');
 
-// Route::get('redirect1', function () {
-//     return redirect('/redirect2');
-// });
+Route::get('redirect1', function () {
+    return redirect('/redirect2');
+});
 
 Route::get('redirect2', function () {
     return 'Redirect 02';
@@ -96,6 +99,7 @@ Route::get('/contato', function () {
 Route::get('/', function () {
     return view('welcome');
 });
+*/
 
 
 
