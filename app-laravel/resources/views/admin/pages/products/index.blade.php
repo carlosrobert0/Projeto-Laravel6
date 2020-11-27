@@ -6,6 +6,10 @@
 
     <h1>exibindo os produtos</h1>
 
+        <a href="{{ route('products.create') }}">Cadastrar</a>
+
+    <hr>
+
     @component('admin.components.card')
         @slot('title')
             <h1>Titulo card</h1>
@@ -95,6 +99,6 @@
 
 @push('scripts')
     <script>
-        document.body.style.background = '#fffe90'
+        document.body.style.background = '#ebfffa'
     </script>
 @endpush
