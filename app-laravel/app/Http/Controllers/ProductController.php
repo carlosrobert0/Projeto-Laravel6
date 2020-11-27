@@ -6,34 +6,85 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    protected $request;
 
-    public function index() {
-        $products = ['Product 01', 'Product 02', 'Product 03'];
-
-        return $products;
+    public function __construct(Request $request) {
+        $this->request = $request;
     }
 
-    public function show($id = '') {
-        return "exibindo o produto de id: {$id}";
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return 'listagem dos products';
     }
 
-    public function create() {
-        return "Exibindo o form de cadastro de um novo produto";
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
     }
 
-    public function edit($id) {
-        return "form para editar o produto: {$id}";
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
     }
 
-    public function store() {
-        return "Cadastrando um novo produto";
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        return "listagem do product: {$id}";
     }
 
-    public function update($id) {
-        return "Editando o produto: {$id}";
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
     }
 
-    public function destroy($id) {
-        return "Editando o produto: {$id}";
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
     }
 }
