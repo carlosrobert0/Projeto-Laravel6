@@ -7,7 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    fafsasd
-    {{ $teste }}
+    {!! $teste !!}
 </body>
 </html>
