@@ -27,7 +27,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return 'listagem dos products';
+        $teste = 123;
+        return view('teste', compact('teste'));
     }
 
     /**
